@@ -1,0 +1,7 @@
+Teamreport application manages project assignments between workers in different teams and displays time utilizations of each worker as well as cummulative team utilization. Each worker can be separately modified with new project assignments, days of availability and vacation.
+
+Libraries used are JQuery, Bootstrap, and for the offline data storage Dexie, which is a wrapper for IndexedDB. 
+Functionality is implemented in main.js and teamreport.js, former being used to initialize and setup, and latter for user interaction with report. 
+
+Reports are opened by selecting one or more teams, a year and clicking Show button, which calls showTeams() to construct and populate tables with data from database. In this process every table cell for worker and month are added to event listener. Clicking on one of those cells calls the editWorker() and opens modal window. In this window we can assign how many days per week a worker is available or on vacation, as well as assignments to projects which are connected to that worker. After modifications are completed, by clicking on Save button, saveWorker() function is called which reads and validates modified values. If values are invalid user will be notified, otherwise data is stored in database and team report tables are refreshed both for the modified cell as well as cummulative column utilization.
+
