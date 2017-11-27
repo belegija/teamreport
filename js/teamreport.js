@@ -283,12 +283,6 @@ function validateWorkerInput () {
     return valid;
 }
 
-
-// 
-// @param {number} month
-// @param {number} year
-// @returns {Array} 
-
 /**
  * Calculates all mondays for a given month in a year.
  * @param {number} month Month between 0-11
